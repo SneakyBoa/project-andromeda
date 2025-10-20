@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dpddswccb7rlf"]
 
-[ext_resource type="Texture2D" uid="uid://dj744xk0707un" path="res://Assets/background.png" id="1_kevgw"]
-[ext_resource type="Script" uid="uid://8sadrvbcu3xa" path="res://galaxy.gd" id="1_mlh1b"]
-[ext_resource type="Script" uid="uid://dbbq7tvdbuu1i" path="res://starContainer.gd" id="3_obluv"]
-[ext_resource type="Script" uid="uid://bgcsq011kbdga" path="res://galaxy_camera.gd" id="4_3van1"]
+[ext_resource type="Script" uid="uid://8sadrvbcu3xa" path="res://Scripts/galaxy.gd" id="1_l2cf4"]
+[ext_resource type="Texture2D" uid="uid://dj744xk0707un" path="res://Assets/background.png" id="2_qfskf"]
+[ext_resource type="Script" uid="uid://dbbq7tvdbuu1i" path="res://Scripts/starContainer.gd" id="3_n510u"]
+[ext_resource type="Script" uid="uid://bgcsq011kbdga" path="res://Scripts/galaxy_camera.gd" id="4_rqodu"]
 
 [sub_resource type="GDScript" id="GDScript_3van1"]
 script/source = "extends Sprite2D
@@ -20,16 +20,16 @@ func _process(delta: float) -> void:
 "
 
 [node name="Galaxy" type="Node2D"]
-script = ExtResource("1_mlh1b")
+script = ExtResource("1_l2cf4")
 
 [node name="galaxyBackground" type="Sprite2D" parent="."]
 position = Vector2(1028, 550)
 scale = Vector2(0.65494794, 0.73888886)
-texture = ExtResource("1_kevgw")
+texture = ExtResource("2_qfskf")
 script = SubResource("GDScript_3van1")
 
 [node name="starContainer" type="Node2D" parent="."]
-script = ExtResource("3_obluv")
+script = ExtResource("3_n510u")
 
 [node name="GenerateGalaxy" type="Button" parent="."]
 offset_right = 8.0
@@ -38,7 +38,7 @@ text = "Generate Galaxy"
 
 [node name="galaxyCamera" type="Camera2D" parent="."]
 offset = Vector2(960, 540)
-script = ExtResource("4_3van1")
+script = ExtResource("4_rqodu")
 
 [connection signal="pressed" from="GenerateGalaxy" to="galaxyBackground" method="_on_generate_galaxy_pressed"]
 [connection signal="pressed" from="GenerateGalaxy" to="starContainer" method="_on_generate_galaxy"]

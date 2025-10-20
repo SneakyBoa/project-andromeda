@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 
 
 func _on_generate_galaxy() -> void:
-	var starScene = load("res://star.tscn")
+	var starScene = load("res://Scenes/star.tscn")
 	var stars = get_children()
 	for n in 75: #TODO: this number should correspond to galaxy size
 		var new_instance = starScene.instantiate()
