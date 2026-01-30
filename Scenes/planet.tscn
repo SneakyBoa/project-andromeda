@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxm10qvupmv7l"]
+
+[ext_resource type="Texture2D" uid="uid://dse7o7rfgmlsa" path="res://Assets/planet.png" id="1_xehyc"]
+
+[node name="Planet" type="Node2D"]
+
+[node name="StructureContainer" type="Node2D" parent="."]
+
+[node name="PopulationContainer" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.004736189, 0.004851979)
+texture = ExtResource("1_xehyc")

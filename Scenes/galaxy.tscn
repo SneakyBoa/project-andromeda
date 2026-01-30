@@ -23,22 +23,24 @@ func _process(delta: float) -> void:
 script = ExtResource("1_l2cf4")
 
 [node name="galaxyBackground" type="Sprite2D" parent="."]
-position = Vector2(1028, 550)
-scale = Vector2(0.65494794, 0.73888886)
+position = Vector2(959.00006, 545)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_qfskf")
 script = SubResource("GDScript_3van1")
 
 [node name="starContainer" type="Node2D" parent="."]
 script = ExtResource("3_n510u")
 
-[node name="GenerateGalaxy" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Generate Galaxy"
-
 [node name="galaxyCamera" type="Camera2D" parent="."]
 offset = Vector2(960, 540)
 script = ExtResource("4_rqodu")
 
-[connection signal="pressed" from="GenerateGalaxy" to="galaxyBackground" method="_on_generate_galaxy_pressed"]
-[connection signal="pressed" from="GenerateGalaxy" to="starContainer" method="_on_generate_galaxy"]
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="GenerateGalaxy" type="Button" parent="UILayer"]
+offset_right = 137.0
+offset_bottom = 31.0
+text = "Generate Galaxy"
+
+[connection signal="pressed" from="UILayer/GenerateGalaxy" to="galaxyBackground" method="_on_generate_galaxy_pressed"]
+[connection signal="pressed" from="UILayer/GenerateGalaxy" to="starContainer" method="_on_generate_galaxy"]
