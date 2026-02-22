@@ -1,6 +1,6 @@
 # Project Andromeda
 
-Project Andromeda is a sci-fi 4X game made in Godot 4.5. It draws inspiratino mainly from Master of Orion 2, but with some features from other 4X games and some ideas of my own.
+Project Andromeda is a sci-fi 4X game made in Godot 4.5. It draws inspiration mainly from Master of Orion 2, but with some features from other 4X games and some ideas of my own.
 This is very WIP, but is seeking contributors and/or permanent staff across all gamedev disciplines.
 
 The core design document can be found here:
